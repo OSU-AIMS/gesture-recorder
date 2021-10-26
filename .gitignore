@@ -1,7 +1,7 @@
 ## git Ignore
 
 # Skip contents of general workarea (except readme)
-workspace/
+workspace/*
 !workspace/README.md
 
 # Skip Logs & Bags Recorded
