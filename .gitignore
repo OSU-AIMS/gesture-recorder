@@ -1,0 +1,14 @@
+## git Ignore
+
+# Skip contents of general workarea (except readme)
+workspace/
+!workspace/README.md
+
+# Skip Logs & Bags Recorded
+*.log
+*.bag
+
+# Skip recorded Images
+*.tiff
+*.png
+*.jpg

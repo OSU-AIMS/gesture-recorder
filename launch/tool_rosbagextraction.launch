@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Tier1 Launch File -->
+
+<launch>
+
+    <!-- Launch Arguments -->
+    <arg name="file2extract" />     <!-- Example: value= "$(find gesture_recorder)/workspace/BAGNAME.bag" -->
+    <arg name="topic2extract" />    <!-- Example: value= "/device_0/sensor_0/Depth_0/image/data" -->
+
+    <!-- Play ROS Bag File -->
+    <node pkg="rosbag" type="play" name="rosbag" required="true" args="$(arg file2extract)"/>
+
+    <!-- Stream Images from Topic into $HOME/.ROS Directory -->
+    <node name="extract" pkg="image_view" type="extract_images" respawn="false" required="true" output="screen" cwd="ROS_HOME">
+        <remap from="image" to="$(arg topic2extract)" />
+    </node>
+
+</launch>

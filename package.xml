@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+    
+    <name>gesture_recorder</name>
+    <version>0.1.0</version>
+    <description>The gesture_recorder package</description>
+
+    <license>Apache 2.0</license>
+    <maintainer email="buynak.9@osu.edu">ACBuynak @ The Ohio State University</maintainer>
+    <url type="AIMS Website">https://cdme.osu.edu/aims-lab</url>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+</package>
